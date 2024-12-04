@@ -7,35 +7,35 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/servizi")
+@app.route("/servizi.html")
 def servizi():
     return render_template("servizi.html")
 
-@app.route("/documenti")
+@app.route("/documenti.html")
 def documenti():
     return render_template("documenti.html")
 
-@app.route("/tributi")
+@app.route("/tributi.html")
 def tributi():
     return render_template("tributi.html")
 
-@app.route("/anagrafe")
+@app.route("/anagrafe.html")
 def anagrafe():
     return render_template("anagrafe.html")
 
-@app.route("/turismo")
+@app.route("/turismo.html")
 def turismo():
     return render_template("turismo.html")
 
-@app.route("/notizie")
+@app.route("/notizie.html")
 def notizie():
     return render_template("notizie.html")
 
-@app.route("/attrazioni")
+@app.route("/attrazioni.html")
 def attrazioni():
     return render_template("attrazioni.html")
 
-@app.route("/storia")
+@app.route("/storia.html")
 def storia():
     return render_template("storia.html")
 
