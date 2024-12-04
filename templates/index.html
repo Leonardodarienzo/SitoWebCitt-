@@ -1,73 +1,147 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benevento - La Città della Storia</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comune di Roma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 0;
+        }
+        .card-body h5 {
+            color: #007bff;
+        }
+        .navbar-nav .nav-link {
+            color: #007bff;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-  <header class="bg-dark text-white p-4">
-    <div class="container">
-      <h1>Benevento</h1>
-      <p class="lead">Una città ricca di storia e tradizioni</p>
+    <!-- Header e Navigazione -->
+    <header>
+        <div class="container text-center">
+            <h1>Benvenuti nel Comune di Roma</h1>
+            <p>Informazioni e servizi per i cittadini e i turisti</p>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Comune di Roma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="documenti.html">Richiesta Documenti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tributi.html">Tasse e Tributi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="anagrafe.html">Servizi Anagrafici</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="turismo.html">Turismo e Cultura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notizie.html">Ultime Notizie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="storia.html">La Storia di Roma</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sezione Servizi -->
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Servizi Offerti</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://example.com/servizio1.jpg" class="card-img-top" alt="Servizio 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Servizi Anagrafici</h5>
+                        <p class="card-text">Richiesta di certificati, residenza, cambio di indirizzo e altro.</p>
+                        <a href="anagrafe.html" class="btn btn-primary">Scopri di più</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://example.com/servizio2.jpg" class="card-img-top" alt="Servizio 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Tasse e Tributi</h5>
+                        <p class="card-text">Informazioni su IMU, TARI e altri tributi comunali.</p>
+                        <a href="tributi.html" class="btn btn-primary">Scopri di più</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://example.com/servizio3.jpg" class="card-img-top" alt="Servizio 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Richiesta Documenti</h5>
+                        <p class="card-text">Scopri come richiedere certificati e altri documenti ufficiali.</p>
+                        <a href="documenti.html" class="btn btn-primary">Scopri di più</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="attrazioni.html">Attrazioni</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="eventi.html">Eventi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="ristoranti.html">Dove mangiare</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contatti.html">Contatti</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Sezione Notizie -->
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Ultime Notizie</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://example.com/notizia1.jpg" class="card-img-top" alt="Notizia 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Apertura del nuovo centro culturale</h5>
+                        <p class="card-text">Il Comune inaugura un nuovo spazio per eventi culturali nel cuore della città.</p>
+                        <a href="notizie.html" class="btn btn-primary">Leggi di più</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://example.com/notizia2.jpg" class="card-img-top" alt="Notizia 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Manutenzione stradale in corso</h5>
+                        <p class="card-text">Interventi di riparazione previsti nelle prossime settimane. Consulta il calendario.</p>
+                        <a href="notizie.html" class="btn btn-primary">Leggi di più</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <section class="container my-5">
-    <h2>Benvenuti a Benevento!</h2>
-    <p>Benevento è una città della Campania, ricca di storia e cultura. Conosciuta per il suo patrimonio romano e medievale, la città offre attrazioni straordinarie come il Teatro Romano, l'Arco di Traiano, e la Cattedrale di Benevento.</p>
-    <img src="images/benevento-1.jpg" class="img-fluid" alt="Benevento">
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Comune di Roma - Tutti i diritti riservati</p>
+        </div>
+    </footer>
 
-    <div class="row my-4">
-      <div class="col-md-4">
-        <h3>Attrazioni</h3>
-        <p>Scopri le principali attrazioni turistiche di Benevento.</p>
-        <a href="attrazioni.html" class="btn btn-primary">Scopri di più</a>
-      </div>
-      <div class="col-md-4">
-        <h3>Eventi</h3>
-        <p>Eventi, feste e tradizioni che rendono unica la città.</p>
-        <a href="eventi.html" class="btn btn-primary">Scopri di più</a>
-      </div>
-      <div class="col-md-4">
-        <h3>Dove mangiare</h3>
-        <p>I migliori ristoranti e locali dove gustare la cucina sannita.</p>
-        <a href="ristoranti.html" class="btn btn-primary">Scopri di più</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-dark text-white p-3 text-center">
-    <p>&copy; 2024 BeneventoTour - Tutti i diritti riservati</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
