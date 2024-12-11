@@ -1,20 +1,78 @@
-<section id="attrazioni" class="container py-5">
-  <h2>Attrazioni principali di Roma</h2>
-  <div class="row">
-      <div class="col-md-4">
-          <img src="filename='images/Colosseo.jpg'" class="img-fluid" alt="Colosseo">
-          <h3>Colosseo</h3>
-          <p>Il simbolo della Roma antica.</p>
-      </div>
-      <div class="col-md-4">
-          <img src="filename='images/FontanadiTrevi.jpg'" class="img-fluid" alt="Fontana di Trevi">
-          <h3>Fontana di Trevi</h3>
-          <p>Un gioiello barocco nel cuore della città.</p>
-      </div>
-      <div class="col-md-4">
-          <img src="{{ url_for('static', filename='images/vaticano.jpg') }}" class="img-fluid" alt="Vaticano">
-          <h3>Vaticano</h3>
-          <p>Il centro della cristianità.</p>
-      </div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attrazioni di Roma</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark" style="background-color: #8B0000;">
+        <div class="container">
+            <a class="navbar-brand" href="#">Roma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/storia">Storia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/attrazioni">Attrazioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/eventi">Eventi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header text-center py-5" style="background-color: #8B0000;">
+        <h2 class="text-white">Le Attrazioni di Roma</h2>
+    </section>
+
+    <section class="attractions-grid py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="attraction-card p-4 rounded shadow">
+                        <img src="{{ url_for('static', filename='images/colosseo.jpg') }}" alt="Colosseo" class="img-fluid rounded mb-3">
+                        <h3>Colosseo</h3>
+                        <p>Un antico anfiteatro che racconta la storia dell'antica Roma, simbolo della città.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="attraction-card p-4 rounded shadow">
+                        <img src="{{ url_for('static', filename='images/fontanadiTrevi.jpg') }}" alt="Fontana di Trevi" class="img-fluid rounded mb-3">
+                        <h3>Fontana di Trevi</h3>
+                        <p>Famosa per la sua bellezza e la tradizione di lanciare una moneta per tornare a Roma.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="attraction-card p-4 rounded shadow">
+                        <img src="{{ url_for('static', filename='images/vaticano.jpg') }}" alt="Vaticano" class="img-fluid rounded mb-3">
+                        <h3>Vaticano</h3>
+                        <p>Il centro spirituale del cattolicesimo, con la Basilica di San Pietro e i Musei Vaticani.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="attraction-card p-4 rounded shadow">
+                        <img src="{{ url_for('static', filename='images/pantheon.jpg') }}" alt="Pantheon" class="img-fluid rounded mb-3">
+                        <h3>Pantheon</h3>
+                        <p>Un magnifico tempio romano che incanta con la sua architettura e la sua storia millenaria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

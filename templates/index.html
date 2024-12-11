@@ -3,144 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comune di Roma</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px 0;
-        }
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 15px 0;
-        }
-        .card-body h5 {
-            color: #007bff;
-        }
-        .navbar-nav .nav-link {
-            color: #007bff;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #0056b3;
-        }
-    </style>
+    <title>Roma</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="container text-center">
-            <h1>Benvenuti nel Comune di Roma</h1>
-            <p>Informazioni e servizi per i cittadini e i turisti</p>
-        </div>
-    </header>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="navbar navbar-expand-lg navbar-dark" style="background-color: #9B1C31;"> <!-- Rosso Pompeiano -->
         <div class="container">
-            <a class="navbar-brand" href="#">Comune di Roma</a>
+            <a class="navbar-brand" href="#" style="font-family: 'Times New Roman', serif; color: #F1C27D;">Roma</a> <!-- Giallo dorato -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="documenti.html">Richiesta Documenti</a>
+                        <a class="nav-link" href="/" style="color: #F1C27D;">Home</a> <!-- Giallo dorato -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tributi.html">Tasse e Tributi</a>
+                        <a class="nav-link" href="/storia" style="color: #F1C27D;">Storia</a> <!-- Giallo dorato -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="anagrafe.html">Servizi Anagrafici</a>
+                        <a class="nav-link" href="/attrazioni" style="color: #F1C27D;">Attrazioni</a> <!-- Giallo dorato -->
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="turismo.html">Turismo e Cultura</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="notizie.html">Ultime Notizie</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="storia.html">La Storia di Roma</a>
+                        <a class="nav-link" href="/eventi" style="color: #F1C27D;">Eventi</a> <!-- Giallo dorato -->
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Sezione Servizi -->
-    <div class="container py-5">
-        <h2 class="text-center mb-4">Servizi Offerti</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://example.com/servizio1.jpg" class="card-img-top" alt="Servizio 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Servizi Anagrafici</h5>
-                        <p class="card-text">Richiesta di certificati, residenza, cambio di indirizzo e altro.</p>
-                        <a href="anagrafe.html" class="btn btn-primary">Scopri di più</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://example.com/servizio2.jpg" class="card-img-top" alt="Servizio 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Tasse e Tributi</h5>
-                        <p class="card-text">Informazioni su IMU, TARI e altri tributi comunali.</p>
-                        <a href="tributi.html" class="btn btn-primary">Scopri di più</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://example.com/servizio3.jpg" class="card-img-top" alt="Servizio 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Richiesta Documenti</h5>
-                        <p class="card-text">Scopri come richiedere certificati e altri documenti ufficiali.</p>
-                        <a href="documenti.html" class="btn btn-primary">Scopri di più</a>
-                    </div>
-                </div>
-            </div>
+    <section class="hero d-flex align-items-center justify-content-center text-center" style="background-image: url('{{ url_for('static', filename='images/romasunset.jpg') }}'); height: 100vh; background-size: cover;">
+        <div class="overlay p-4" style="background: rgba(0, 0, 0, 0.5);">
+            <h2 class="text-white display-3">Benvenuti a Roma, la Città Eterna</h2>
+            <p class="text-white">Esplora la storia millenaria, le meraviglie artistiche e gli eventi che la rendono unica.</p>
+            <a href="/storia" class="btn btn-warning btn-lg">Scopri la Storia</a> <!-- Giallo dorato -->
         </div>
-    </div>
+    </section>
 
-    <!-- Sezione Notizie -->
-    <div class="container py-5">
-        <h2 class="text-center mb-4">Ultime Notizie</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <img src="https://example.com/notizia1.jpg" class="card-img-top" alt="Notizia 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Apertura del nuovo centro culturale</h5>
-                        <p class="card-text">Il Comune inaugura un nuovo spazio per eventi culturali nel cuore della città.</p>
-                        <a href="notizie.html" class="btn btn-primary">Leggi di più</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <img src="https://example.com/notizia2.jpg" class="card-img-top" alt="Notizia 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Manutenzione stradale in corso</h5>
-                        <p class="card-text">Interventi di riparazione previsti nelle prossime settimane. Consulta il calendario.</p>
-                        <a href="notizie.html" class="btn btn-primary">Leggi di più</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2024 Comune di Roma - Tutti i diritti riservati</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

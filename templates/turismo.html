@@ -3,25 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turismo e Cultura - Comune di Roma</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Eventi di Roma</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-4">
-        <h1>Turismo e Cultura</h1>
+    <header class="navbar navbar-expand-lg navbar-dark" style="background-color: #8B0000;">
+        <div class="container">
+            <a class="navbar-brand" href="#">Roma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/storia">Storia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/attrazioni">Attrazioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/eventi">Eventi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
-    <main class="container py-5">
-        <h2>Attività culturali</h2>
-        <ul>
-            <li>Musei e gallerie d'arte</li>
-            <li>Eventi culturali e festival</li>
-            <li>Teatri e cinema</li>
-        </ul>
-        <h2>Guida turistica</h2>
-        <p>Scopri i monumenti storici, le piazze e i rioni di Roma.</p>
-    </main>
-    <footer class="bg-dark text-white text-center py-3">
-        <p>© 2024 Comune di Roma - Tutti i diritti riservati</p>
-    </footer>
+
+    <section class="page-header text-center py-5" style="background-color: #8B0000;">
+        <h2 class="text-white">Scopri gli Eventi di Roma</h2>
+        <p class="text-white">Concerti, festival, spettacoli e molto altro nella capitale italiana.</p>
+    </section>
+
+    <section class="event-calendar py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="event-card p-4 rounded shadow" style="background: linear-gradient(135deg, #e63946, #8B0000); color: white;">
+                        <h3>Concerto di Capodanno al Teatro dell'Opera</h3>
+                        <p><strong>Data:</strong> 31 Dicembre</p>
+                        <p><strong>Luogo:</strong> Teatro dell'Opera di Roma</p>
+                        <p>Un evento musicale per celebrare l'arrivo del nuovo anno con eleganza.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="event-card p-4 rounded shadow" style="background: linear-gradient(135deg, #e63946, #8B0000); color: white;">
+                        <h3>Maratona di Roma</h3>
+                        <p><strong>Data:</strong> 7 Aprile</p>
+                        <p><strong>Luogo:</strong> Strade di Roma</p>
+                        <p>Un evento sportivo che porta i corridori a scoprire le meraviglie di Roma.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="event-card p-4 rounded shadow" style="background: linear-gradient(135deg, #e63946, #8B0000); color: white;">
+                        <h3>Estate Romana</h3>
+                        <p><strong>Data:</strong> Giugno - Settembre</p>
+                        <p><strong>Luogo:</strong> Parchi e piazze di Roma</p>
+                        <p>Una serie di eventi culturali, musicali e teatrali all'aperto in tutta la città.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
